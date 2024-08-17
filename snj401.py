@@ -22,14 +22,8 @@ def fileReadByLines(filePath):
 
 if __name__ == "__main__":
     patternPath = "mach3.pat"
-
-    regexCompiledList = []
-    re_checkFileComment = re.compile(r"^//.*$")
-    re_checkPatternBody = re.compile(r"^[01HLZX]{%d}$" % pinNum)
-    regexCompiledList.append(re_checkFileComment)
-    regexCompiledList.append(re_checkPatternBody)
-
     SNJ401File.checkFilePattern(patternPath)
+
     lineList = fileReadByLines(patternPath)
     pinNum = 47
 

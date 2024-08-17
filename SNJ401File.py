@@ -1,5 +1,11 @@
 import re
 
+regexCompiledList = []
+re_checkFileComment = re.compile(r"^//.*$")
+re_checkPatternBody = re.compile(r"^[01HLZX]{%d}$" % pinNum)
+regexCompiledList.append(re_checkFileComment)
+regexCompiledList.append(re_checkPatternBody)
+
 
 # pattern文件格式校验,用于确认整个pattern内容都是匹配的，防止遗漏内容
 def checkFilePattern(filePath, regexPatternList):
