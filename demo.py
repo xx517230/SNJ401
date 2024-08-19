@@ -1,8 +1,13 @@
-if "":
-    print("None")
-else:
-    print("not None")
+import re
 
+# if "":
+#     print("None")
+# else:
+#     print("not None")
+
+re_pinGroup = re.compile(r"^(?P<pinName>\w+)\[(?P<maxNum>\d+):(?P<minNum>\d+)\]$")
+
+print(len(re_pinGroup.groupindex))
 
 # ll = [1, 2, 3, None, None]
 # print(ll)
